@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		572C749AFD56A1F5DCAE56AF /* Pods_Device_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C85C9F44A798D3A0742796 /* Pods_Device_Inventory.framework */; };
+		73633B361C8E0BA90069478F /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B351C8E0BA90069478F /* MyModel.swift */; };
+		73633B381C8E0C4F0069478F /* MyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B371C8E0C4F0069478F /* MyModelTests.swift */; };
+		73633B3B1C8E124E0069478F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73633B3A1C8E124E0069478F /* CoreData.framework */; };
+		73633B421C8E19DD0069478F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B411C8E19DD0069478F /* Device.swift */; };
+		73633B441C8E1B2E0069478F /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B431C8E1B2E0069478F /* DeviceList.swift */; };
+		73980D201C8F37CD009AC30E /* DevicesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73980D1F1C8F37CD009AC30E /* DevicesListTableViewController.swift */; };
 		73B31CD91C8DE29B00C76F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31CD81C8DE29B00C76F01 /* AppDelegate.swift */; };
 		73B31CDB1C8DE29B00C76F01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31CDA1C8DE29B00C76F01 /* ViewController.swift */; };
 		73B31CDE1C8DE29B00C76F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B31CDC1C8DE29B00C76F01 /* Main.storyboard */; };
@@ -15,6 +21,7 @@
 		73B31CE31C8DE29B00C76F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B31CE11C8DE29B00C76F01 /* LaunchScreen.storyboard */; };
 		73B31CEE1C8DE29B00C76F01 /* Device_InventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31CED1C8DE29B00C76F01 /* Device_InventoryTests.swift */; };
 		73B31CF91C8DE29B00C76F01 /* Device_InventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31CF81C8DE29B00C76F01 /* Device_InventoryUITests.swift */; };
+		73E332581C8FDE1000478AFF /* DevicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E332571C8FDE1000478AFF /* DevicesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73633B351C8E0BA90069478F /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		73633B371C8E0C4F0069478F /* MyModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModelTests.swift; sourceTree = "<group>"; };
+		73633B3A1C8E124E0069478F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		73633B411C8E19DD0069478F /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		73633B431C8E1B2E0069478F /* DeviceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
+		73980D1F1C8F37CD009AC30E /* DevicesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesListTableViewController.swift; sourceTree = "<group>"; };
 		73B31CD51C8DE29B00C76F01 /* Device_Inventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Device_Inventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B31CD81C8DE29B00C76F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B31CDA1C8DE29B00C76F01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +61,7 @@
 		73B31CF41C8DE29B00C76F01 /* Device_InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Device_InventoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B31CF81C8DE29B00C76F01 /* Device_InventoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device_InventoryUITests.swift; sourceTree = "<group>"; };
 		73B31CFA1C8DE29B00C76F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73E332571C8FDE1000478AFF /* DevicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesTableViewCell.swift; sourceTree = "<group>"; };
 		A4F20BB284DCE5A844A380E7 /* Pods-Device_Inventory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Device_Inventory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Device_Inventory/Pods-Device_Inventory.release.xcconfig"; sourceTree = "<group>"; };
 		A83C90B388397F6E82BC97B0 /* Pods-Device_Inventory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Device_Inventory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Device_Inventory/Pods-Device_Inventory.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C85C9F44A798D3A0742796 /* Pods_Device_Inventory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Device_Inventory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73633B3B1C8E124E0069478F /* CoreData.framework in Frameworks */,
 				572C749AFD56A1F5DCAE56AF /* Pods_Device_Inventory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +97,7 @@
 		04F5F52E6A6FE117E805E6B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73633B3A1C8E124E0069478F /* CoreData.framework */,
 				B5C85C9F44A798D3A0742796 /* Pods_Device_Inventory.framework */,
 			);
 			name = Frameworks;
@@ -94,6 +110,15 @@
 				A4F20BB284DCE5A844A380E7 /* Pods-Device_Inventory.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		73633B401C8E19CB0069478F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73633B411C8E19DD0069478F /* Device.swift */,
+				73633B431C8E1B2E0069478F /* DeviceList.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		73B31CCC1C8DE29B00C76F01 = {
@@ -121,12 +146,16 @@
 		73B31CD71C8DE29B00C76F01 /* Device_Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				73633B401C8E19CB0069478F /* Model */,
 				73B31CD81C8DE29B00C76F01 /* AppDelegate.swift */,
 				73B31CDA1C8DE29B00C76F01 /* ViewController.swift */,
+				73E332571C8FDE1000478AFF /* DevicesTableViewCell.swift */,
+				73980D1F1C8F37CD009AC30E /* DevicesListTableViewController.swift */,
 				73B31CDC1C8DE29B00C76F01 /* Main.storyboard */,
 				73B31CDF1C8DE29B00C76F01 /* Assets.xcassets */,
 				73B31CE11C8DE29B00C76F01 /* LaunchScreen.storyboard */,
 				73B31CE41C8DE29B00C76F01 /* Info.plist */,
+				73633B351C8E0BA90069478F /* MyModel.swift */,
 			);
 			path = Device_Inventory;
 			sourceTree = "<group>";
@@ -136,6 +165,7 @@
 			children = (
 				73B31CED1C8DE29B00C76F01 /* Device_InventoryTests.swift */,
 				73B31CEF1C8DE29B00C76F01 /* Info.plist */,
+				73633B371C8E0C4F0069478F /* MyModelTests.swift */,
 			);
 			path = Device_InventoryTests;
 			sourceTree = "<group>";
@@ -220,6 +250,7 @@
 				TargetAttributes = {
 					73B31CD41C8DE29B00C76F01 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 899V2XU7M8;
 					};
 					73B31CE81C8DE29B00C76F01 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -331,8 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73633B441C8E1B2E0069478F /* DeviceList.swift in Sources */,
+				73E332581C8FDE1000478AFF /* DevicesTableViewCell.swift in Sources */,
+				73980D201C8F37CD009AC30E /* DevicesListTableViewController.swift in Sources */,
 				73B31CDB1C8DE29B00C76F01 /* ViewController.swift in Sources */,
 				73B31CD91C8DE29B00C76F01 /* AppDelegate.swift in Sources */,
+				73633B361C8E0BA90069478F /* MyModel.swift in Sources */,
+				73633B421C8E19DD0069478F /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B31CEE1C8DE29B00C76F01 /* Device_InventoryTests.swift in Sources */,
+				73633B381C8E0C4F0069478F /* MyModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +512,13 @@
 			baseConfigurationReference = A83C90B388397F6E82BC97B0 /* Pods-Device_Inventory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Device_Inventory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenguyen.Device-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -487,10 +527,13 @@
 			baseConfigurationReference = A4F20BB284DCE5A844A380E7 /* Pods-Device_Inventory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Device_Inventory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kenguyen.Device-Inventory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
