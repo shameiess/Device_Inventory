@@ -10,9 +10,17 @@ import UIKit
 
 class DevicesTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var modelLabel: UILabel!
-    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var deviceLabel: UILabel!
+    @IBOutlet weak var osLabel: UILabel!
+    @IBOutlet weak var barcodeLabel: UILabel!
+    @IBOutlet weak var carrierLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var simLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var availableLabel: UILabel!
+    @IBOutlet weak var modelLabel: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

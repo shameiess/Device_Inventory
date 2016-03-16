@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		572C749AFD56A1F5DCAE56AF /* Pods_Device_Inventory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C85C9F44A798D3A0742796 /* Pods_Device_Inventory.framework */; };
+		732F3E3F1C985B75002DC7B1 /* DeviceDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F3E3E1C985B75002DC7B1 /* DeviceDetailTableViewController.swift */; };
 		73633B361C8E0BA90069478F /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B351C8E0BA90069478F /* MyModel.swift */; };
 		73633B381C8E0C4F0069478F /* MyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633B371C8E0C4F0069478F /* MyModelTests.swift */; };
 		73633B3B1C8E124E0069478F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73633B3A1C8E124E0069478F /* CoreData.framework */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		732F3E3E1C985B75002DC7B1 /* DeviceDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailTableViewController.swift; sourceTree = "<group>"; };
 		73633B351C8E0BA90069478F /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		73633B371C8E0C4F0069478F /* MyModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyModelTests.swift; sourceTree = "<group>"; };
 		73633B3A1C8E124E0069478F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		733302661C99B8BB00D3EEBD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				73B31CDA1C8DE29B00C76F01 /* ViewController.swift */,
+				73980D1F1C8F37CD009AC30E /* DevicesListTableViewController.swift */,
+				732F3E3E1C985B75002DC7B1 /* DeviceDetailTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		73633B401C8E19CB0069478F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				73633B401C8E19CB0069478F /* Model */,
+				733302661C99B8BB00D3EEBD /* ViewController */,
 				73B31CD81C8DE29B00C76F01 /* AppDelegate.swift */,
-				73B31CDA1C8DE29B00C76F01 /* ViewController.swift */,
 				73E332571C8FDE1000478AFF /* DevicesTableViewCell.swift */,
-				73980D1F1C8F37CD009AC30E /* DevicesListTableViewController.swift */,
 				73B31CDC1C8DE29B00C76F01 /* Main.storyboard */,
 				73B31CDF1C8DE29B00C76F01 /* Assets.xcassets */,
 				73B31CE11C8DE29B00C76F01 /* LaunchScreen.storyboard */,
@@ -364,6 +375,7 @@
 			files = (
 				73633B441C8E1B2E0069478F /* DeviceList.swift in Sources */,
 				73E332581C8FDE1000478AFF /* DevicesTableViewCell.swift in Sources */,
+				732F3E3F1C985B75002DC7B1 /* DeviceDetailTableViewController.swift in Sources */,
 				73980D201C8F37CD009AC30E /* DevicesListTableViewController.swift in Sources */,
 				73B31CDB1C8DE29B00C76F01 /* ViewController.swift in Sources */,
 				73B31CD91C8DE29B00C76F01 /* AppDelegate.swift in Sources */,

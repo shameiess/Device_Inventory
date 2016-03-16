@@ -1,59 +1,42 @@
 //
-//  DevicesListTableViewController.swift
+//  DeviceDetailTableViewController.swift
 //  Device_Inventory
 //
-//  Created by Kevin Nguyen on 3/8/16.
+//  Created by Kevin Nguyen on 3/15/16.
 //  Copyright © 2016 Kevin Nguyen. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class DevicesListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DeviceDetailTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var devicesListTableView: UITableView!
-    
-    var lists : Results<DeviceList>!
+    @IBOutlet var deviceDetailList: UITableView!
+    //var selectedList : DeviceList!
+    var deviceDetails : Results<DeviceList>!
+    //var deviceAvailable : Results<Device>!
+    //var deviceUnavailable : Results<Device>!
     
     var isEditingMode = false
     
-    @IBAction func didClickOnEditButton(sender: UIBarButtonItem) {
-        isEditingMode = !isEditingMode
-        self.devicesListTableView.setEditing(isEditingMode, animated: true)
-    }
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        readTasksAndUpdateUI()
-    }
-    func readTasksAndUpdateUI() {
-        lists = uiRealm.objects(DeviceList)
-        self.devicesListTableView.setEditing(false, animated: true)
-        self.devicesListTableView.reloadData()
-    }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.devicesListTableView.editing = true
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        /*
-        let device1 = DeviceList()
-        device1.device = "iPhone 6s"
-        device1.os = "iOS 9.2"
-        device1.barcode = "1111111"
-        device1.status = "Available"
-        
-        try! uiRealm.write {
-            uiRealm.add(device1)
-        }
-        */
+        //
+        readTasksAndUpdateUI()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    func readTasksAndUpdateUI(){
+        deviceDetails = uiRealm.objects(DeviceList)
+        //deviceDetail = self.selectedList.devices.filter("available = true")
+        //deviceDetail = self.selectedList.devices.filter("available = false")
+        self.deviceDetailList.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,34 +44,40 @@ class DevicesListTableViewController: UIViewController, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - UITableViewDataSource
-    /*
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-    */
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let devicesList = lists {
-            return devicesList.count
-        }
-        return 0
+        return 1
     }
-
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        //let cell = tableView.dequeueReusableCellWithIdentifier("listCell")
-        let cell = tableView.dequeueReusableCellWithIdentifier("listCell", forIndexPath: indexPath) as? DevicesTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DevicesTableViewCell
 
         // Configure the cell...
-        let list = lists[indexPath.row]
+        let selected = deviceDetails[indexPath.row]
         
-        cell?.textLabel?.text = list.model
-        //cell!.availableLabel.text = list.status
-        cell?.detailTextLabel?.text = list.os
-        return cell!
+        cell.deviceLabel.text = selected.device
+        cell.modelLabel.text = selected.model
+        cell.osLabel.text = selected.os
+        cell.barcodeLabel.text = selected.barcode
+        cell.carrierLabel.text = selected.carrier
+        cell.numberLabel.text = selected.number
+        cell.simLabel.text = selected.sim
+        cell.colorLabel.text = selected.color
+        if selected.status == "Available"
+        {
+            cell.statusLabel.textColor = UIColor.redColor()
+        }
+        cell.statusLabel.text = selected.status
+        //cell.availableLabel.text = selected.available
+        
+        return cell
     }
     
 
@@ -126,18 +115,14 @@ class DevicesListTableViewController: UIViewController, UITableViewDelegate, UIT
         return true
     }
     */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("deviceDetail", sender: self.lists[indexPath.row])
-    }
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let deviceDetailTableViewController = segue.destinationViewController as! DeviceDetailTableViewController
-        deviceDetailTableViewController.selectedList = sender as! DeviceList
     }
     */
 
