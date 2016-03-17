@@ -23,6 +23,8 @@ class Device: Object {
     dynamic var available = true
     dynamic var createdAt = NSDate()
     
+    let devices = List<Device>()
+    
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {

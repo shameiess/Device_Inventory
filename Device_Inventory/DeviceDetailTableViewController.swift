@@ -12,7 +12,7 @@ import RealmSwift
 class DeviceDetailTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var deviceDetailList: UITableView!
-    //var selectedList : DeviceList!
+    var selectedDevice : DeviceList!
     var deviceDetails : Results<DeviceList>!
     //var deviceAvailable : Results<Device>!
     //var deviceUnavailable : Results<Device>!
@@ -60,7 +60,7 @@ class DeviceDetailTableViewController: UIViewController, UITableViewDelegate, UI
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DevicesTableViewCell
 
         // Configure the cell...
-        let selected = deviceDetails[indexPath.row]
+        let selected = selectedDevice
         
         cell.deviceLabel.text = selected.device
         cell.modelLabel.text = selected.model
@@ -70,9 +70,13 @@ class DeviceDetailTableViewController: UIViewController, UITableViewDelegate, UI
         cell.numberLabel.text = selected.number
         cell.simLabel.text = selected.sim
         cell.colorLabel.text = selected.color
-        if selected.status == "Available"
-        {
+        if (selected.status == "Available") {
+            cell.statusLabel.textColor = UIColor.greenColor()
+            cell.statusLabel.text = selected.status
+        }
+        else {
             cell.statusLabel.textColor = UIColor.redColor()
+            cell.statusLabel.text = selected.status
         }
         cell.statusLabel.text = selected.status
         //cell.availableLabel.text = selected.available
